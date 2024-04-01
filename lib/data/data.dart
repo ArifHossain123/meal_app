@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meal_app/models/category.dart';
 
-
 const availableCategories = [
   Category(
     id: 'c1',
@@ -52,5 +51,9 @@ const availableCategories = [
     id: 'c10',
     title: 'Summer',
     color: Colors.teal,
+  ),
+  Category(
+    id: 'c11',
+    title: 'Winter',
   ),
 ];
