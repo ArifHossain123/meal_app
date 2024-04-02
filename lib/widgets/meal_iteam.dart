@@ -9,6 +9,14 @@ class MealItem extends StatelessWidget {
   final Meal meal;
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Card(
+      child: InkWell(
+        onTap: () {},
+        child: Stack(children: [
+          FadeInImage(placeholder: placeholder, image: image)
+
+        ],),
+      ),
+    );
   }
 }
