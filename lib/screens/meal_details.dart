@@ -31,11 +31,13 @@ class MealDetailsScreen extends StatelessWidget {
           Text(
             'Ingredient',
             style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                  color: Theme.of(context).colorScheme.onBackground,
+                  color: Theme.of(context).colorScheme.primary,
+                  fontWeight: FontWeight.bold
                 ),
           ),
+          
           for (final ingredient in meal.ingredients) Text('ingredient',
-              style: Theme.of(context).textTheme.titleLarge!.copyWith(
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                   ),
             ),
