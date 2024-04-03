@@ -35,7 +35,7 @@ class MealDetailsScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold
                 ),
           ),
-          
+          const SizedBox(height: 14,),
           for (final ingredient in meal.ingredients) Text('ingredient',
               style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
