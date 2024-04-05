@@ -9,6 +9,12 @@ class TabsScreeen extends StatefulWidget {
 }
 
 class _TabsScreenState extends State<TabsScreeen> {
+  int _selectedPageIndex=0;
+  void _selectPage(index){
+    setState(() {
+      _selectedPageIndex=index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
