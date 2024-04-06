@@ -61,6 +61,7 @@ class _TabsScreenState extends State<TabsScreeen> {
       appBar: AppBar(
         title: Text(activePageTitle),
       ),
+      drawer: Drawer(),
       body: activePage,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedPageIndex,
