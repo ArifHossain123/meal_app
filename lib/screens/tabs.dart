@@ -34,8 +34,9 @@ class _TabsScreenState extends State<TabsScreeen> {
     Widget activePage = const CategoriesScreen();
     var activePageTitle = 'Categories';
     if (_selectedPageIndex == 1) {
-      activePage = const MealsScreen(
+      activePage = MealsScreen(
         meals: [],
+        onFavorite: _mealfavoriteStatus,
       );
       activePageTitle = 'Your Favorite';
     }
