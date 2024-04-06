@@ -34,6 +34,7 @@ class _TabsScreenState extends State<TabsScreeen> {
       setState(() {
         _favoriteMeals.add(meal);
       });
+      _showInfoMessage('Mark as Favorite Meal');
     }
   }
 
