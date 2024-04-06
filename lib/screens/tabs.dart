@@ -21,16 +21,20 @@ class _TabsScreenState extends State<TabsScreeen> {
   @override
   Widget build(BuildContext context) {
     Widget activePage = const CategoriesScreen();
-    var activePageTitle=
+    var activePageTitle = 'Categories';
     if (_selectedPageIndex == 1) {
-      activePage = MealsScreen(title: "Favorite", meals: []);
+      activePage = const MealsScreen(title: "Favorite", meals: [],
+      
+      );
+      activePageTitle = 'Your Favorite';
     }
     return Scaffold(
       appBar: AppBar(
-        title: Text(""),
+        title: Text(activePageTitle),
       ),
       body: activePage,
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedPageIndex,
         onTap: _selectPage,
         items: const [
           BottomNavigationBarItem(
