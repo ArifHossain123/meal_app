@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key});
+ final void Function(String identifier){}
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +10,7 @@ class MainDrawer extends StatelessWidget {
       child: Column(
         children: [
           DrawerHeader(
-            padding: EdgeInsets.all(8),
+            padding:const EdgeInsets.all(8),
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
@@ -58,7 +59,7 @@ class MainDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(
-              Icons.restaurant,
+              Icons.settings,
               size: 26,
               color: Theme.of(context).colorScheme.onBackground,
             ),
@@ -69,7 +70,9 @@ class MainDrawer extends StatelessWidget {
                     fontSize: 24,
                   ),
             ),
-            onTap: () => {},
+            onTap: () {
+              
+            },
           ),
         ],
       ),
