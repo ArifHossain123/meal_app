@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meal_app/widgets/main_drawer.dart';
 
 class FilterScreen extends StatefulWidget {
   const FilterScreen({super.key});
@@ -13,7 +14,10 @@ class _FilterScreenState extends State<FilterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:const Text('Your Filter'),
+        title: const Text('Your Filter'),
+      ),
+      drawer: MainDrawer(
+        onSelectScreen: (identifier) {},
       ),
       body: Column(
         children: [
@@ -37,7 +41,7 @@ class _FilterScreenState extends State<FilterScreen> {
                   ),
             ),
             activeColor: Theme.of(context).colorScheme.tertiary,
-            contentPadding:const EdgeInsets.only(
+            contentPadding: const EdgeInsets.only(
               left: 30,
               right: 22,
             ),
