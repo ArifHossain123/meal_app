@@ -40,13 +40,15 @@ class _FilterScreenState extends State<FilterScreen> {
       //   },
       // ),
       body: PopScope(
-        onPopInvoked: (didPop) => {
+        canPop: false,
+        onPopInvoked: (bool didPop) {
+          if (didPop) return;
           Navigator.of(context).pop({
             Filter.gultenFree: _gultenFreeFilterSet,
             Filter.lactoseFree: _lactoseFreeFilterSet,
             Filter.vegetarian: _vegetarianFilterSet,
             Filter.vegan: _veganFilterSet,
-          }),
+          });
         },
         child: Column(
           children: [
